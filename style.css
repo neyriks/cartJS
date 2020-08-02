@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+button {
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #414b52;
+    margin: 10px;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+}
+img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.navigation-images {
+    margin-right: 20px;
+}
+
+.cart {
+    visibility: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5em;
+    border: 1px solid grey;
+    margin-top: 1em;
+    z-index: 5;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 15px;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    margin-right: 2.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-header-list {
+    justify-content: flex-end;
+}
+
+.cart-header-list h2 {
+    margin-right: auto;
+}
+
+.cart-subheader {
+    justify-content: space-between;
+}
+
+.cart-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cart-footer button:nth-child(2) {
+    margin-right: 15px;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.cart-descr {
+    font-size: 0.9em;
+    margin-left: 30px;
+    color: #333;
+    width: 165px;
+}
+
+#cart-clear,
+.cart-menu-tab {
+    cursor: pointer;
+}
+
+#cart-clear {
+    color: orange;
+}
+
+.cart-total {
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+.d-none {
+    display: none;
+}
+
+.active-tab {
+    text-decoration: underline;
+    color: orange;
+}
+
+.remove {
+    margin-left: 10px;
+}
+
+/* Позиция иконок корзины и звезда*/
+
+.navigation {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* overlay */
+
+
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+    transition: .4s all;
+}

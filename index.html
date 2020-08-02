@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>basket</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="navigation">
+                <img class="navigation-images" src="img/cart.svg" alt="cart">
+                <img class="navigation-images" src="img/favorites.svg" alt="favorites">
+            </div>
+
+
+        </header>
+
+
+
+        <!-- Модалка-->
+        <div class="cart">
+            <div class="cartwrapper">
+                <div class="cart-header-list cart-row">
+                    <h2>Корзина</h2>
+                    <span class="cart-column cart-menu-tab active-tab">Товары в корзине</span>
+                    <span class="cart-column cart-menu-tab">Отложенные товары</span>
+                    <span id="cart-clear" class="cart-column">Очистить список</span>
+                </div>
+                <div class="cart-subheader cart-row">
+                    <span class="cart-column">Наименование</span>
+                    <span class="cart-column">Цена</span>
+                    <span class="cart-column">Количество</span>
+                    <span class="cart-column">Сумма</span>
+                </div>
+                <hr>
+                <div class="cart-content">
+                    <div class="cart-row cart-tab">
+                        <div class="cart-item cart-column">
+                            <img src="img/items/item1.jpg" alt="item1">
+                            <span class="cart-descr">Lorem ipsum dolor sit amet.</span>
+                        </div>
+                        <span class="cart-price cart-column">8000 руб.</span>
+                        <div class="cart-quantity cart-column">
+                            <input class="cart-quantity-input" type="number" value="1">
+                            <button class="remove">Удалить</button>
+                        </div>
+
+                    </div>
+
+                    <div class="cart-row cart-tab d-none">
+                        <div class="cart-item cart-column">
+                            <img src="img/items/item2.jpg" alt="item1">
+                            <span class="cart-descr">Lorem ipsum dolor sit amet consectetur adipisicing.</span>
+                        </div>
+                        <span class="cart-price cart-column">8000 руб.</span>
+                        <div class="cart-quantity cart-column">
+                            <input class="cart-quantity-input">
+                            <button class="remove">Удалить</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-footer">
+                    <div class="cart-total">
+                        <strong class="cart-total-title">Сумма:</strong>
+                        <span class="cart-total-price">8000 руб</span>
+                    </div>
+                    <button>Быстрый заказ</button>
+                    <button>Перейти в корзину</button>
+                </div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+
+</html>
