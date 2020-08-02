@@ -22,6 +22,13 @@ container.addEventListener('click', event => {
     }
 });
 
+document.addEventListener('keydown', e => {
+    if(e.keyCode === 27) {
+        cart.style.visibility = 'hidden';
+        overlay.style.visibility = 'hidden';
+    }
+});
+
 
 
 
