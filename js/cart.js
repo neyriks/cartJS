@@ -28,8 +28,8 @@ for (let i = 0; i < quantityInputs.length; i++) {
 }
 
 const updateCartTotal = () => {
-    const cartItemContainer = document.querySelectorAll('.cart-content')[0],
-        cartRows = cartItemContainer.querySelectorAll('.cart-row');
+    const cartItemContainer = document.querySelector('.cart-content'),
+        cartRows = cartItemContainer.querySelectorAll('#cart-row');
     let total = 0;
 
 
@@ -41,16 +41,19 @@ const updateCartTotal = () => {
             quantity = quantityCart.value;
         total = total + (price * quantity);
     }
-    document.querySelector('.cart-total-price').innerText = total + ' руб';
+    document.querySelector('.cart-total-price').innerText = total + ' руб.';
 };
 
 // очистить корзину
-const cartClear = document.querySelector('#cart-clear');
 
-cartClear.addEventListener('click', () => {
-    document.querySelector('.cartwrapper').remove();
-    let paragraph = document.createElement('p');
-    paragraph.className = "cleared";
-    paragraph.innerHTML = "<strong>Ваша корзина пуста.";
-    document.querySelector('.cart').append(paragraph);
-});
+const fClear = () => {
+    const cartClear = document.querySelector('#cart-clear');
+    cartClear.addEventListener('click', () => {
+        document.querySelector('.cartwrapper').remove();
+        let paragraph = document.createElement('p');
+        paragraph.className = "cleared";
+        paragraph.innerHTML = "<strong>Ваша корзина пуста.";
+        document.querySelector('.cart').append(paragraph);
+    });
+};
+fClear();
